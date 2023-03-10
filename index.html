@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Audio Visual Language Maps for Robot Navigation</title>
+  <meta name="description" content="Audio Visual Language Maps for Robot Navigation">
+  <meta name="keywords" content="AVLMaps">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Audio Visual Language Maps for Robot Navigation">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Audio Visual Language Maps for Robot Navigation">
+  <meta property="og:image" content="https://avlmaps.github.io/static/images/cover_lady.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1082" />
+  <meta property="og:image:height" content="639" />
+  <meta property="og:url" content="https://avlmaps.github.io" />
+  <meta property="og:description" content="Project page for Audio Visual Language Maps for Robot Navigation" />
+  <meta name="twitter:title" content="Audio Visual Language Maps for Robot Navigation" />
+  <meta name="twitter:description" content="Project page for Audio Visual Language Maps for Robot Navigation" />
+  <meta name="twitter:image" content="https://avlmaps.github.io/static/images/cover_lady.png" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WPRRQQR');</script>
+  <!-- End Google Tag Manager -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/vlmaps_icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPRRQQR" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Visual Language Maps for Robot Navigation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="http://www2.informatik.uni-freiburg.de/~huang/">Chenguang Huang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.oiermees.com/">Oier Mees</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://andyzeng.github.io/">Andy Zeng</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.utn.de/1/wolfram-burgard/">Wolfram Burgard</a><sup>3</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Freiburg University,</span>
+              <span class="author-block"><sup>2</sup>Google Research,</span>
+              <span class="author-block"><sup>3</sup>University of Technology Nuremberg</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- CoLab Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="fab fa-github"></i> -->
+                      <img src="static/images/colab_icon.png" />
+                    </span>
+                    <span>CoLab (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src=""
+                type="video/mp4">
+      </video> -->
+
+        <img src="static/images/cover_lady.png" />
+
+        <h2 class="subtitle has-text-centered">
+          AVLMaps enables multimodal spatial goal navigation with language instructions
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve has-text-centered">
+            <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/back_and_forth_x4_hres_caption.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">move back and forth between the box and the keyboard</p>
+
+          </div>
+          <div class="item item-chair-tp has-text-centered">
+            <video poster="" id="chair-tp video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/right_between_v3_x4_hres_caption.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">move right 1.5 meters, then move left 3 meters, then move left 1.5 meters</p>
+          </div>
+          <div class="item item-chair-tp has-text-centered">
+            <video poster="" id="chair-tp video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/right_left_right_x4_hres_caption.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">move right 1.5 meters, then move left 3 meters, then move left 1.5 meters</p>
+          </div>
+          <div class="item item-shiba has-text-centered">
+            <video poster="" id="shiba video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/move_to_plant_x8_hres_caption.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">move to the plant</p>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/move_in_between_x4_hres_caption.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">move in between the wooden box and the chair</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              While interacting in the world is a multi-sensory experi-
+              ence, many robots still rely only on visual perception to map and nav-
+              igate in their environments. In this work, we propose Audio-Visual-
+              Language Maps (AVLMaps), a unified 3D spatial map representation
+              for storing cross-modal information from audio, visual, and language
+              cues. AVLMaps integrate the open-vocabulary capabilities of multi-
+              modal foundation models pre-trained on Internet-scale data by fusing
+              their features into a centralized 3D voxel grid. In the context of nav-
+              igation, we show that AVLMaps enable robot systems to index goals
+              in the map based on multimodal queries, e.g., textual descriptions,
+              images, or audio snippets of landmarks. In particular, the addition of
+              audio information enables robots to more reliably disambiguate goal
+              locations. Extensive experiments in simulation show that AVLMaps
+              enable zero-shot multimodal goal navigation from natural language
+              instructions and provide 50% better recall in ambiguous scenarios.
+              These capabilities extend to mobile robots in the real world – navigat-
+              ing to landmarks where specific sounds were heard in unstructured
+              environments.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="static/images/avlmaps_v2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Approach</h2>
+          <div class="content has-text-justified has-text-centered">
+            <img src="static/images/pipeline.png" />
+            <h3 class="title is-4">AVLMap Creation</h3>
+            <p>
+              The key idea behind building an AVLMap is to integrate visual and audio
+              information into the 3D reconstruction of an environment. This can be
+              done by computing visual localization features (e.g. NetVLAD, SuperPoint),
+              visual-language features (e.g. LSeg), and audio-language features (e.g. AudioCLIP)
+              and associate these features with the 3D reconstruction. Finally, we
+              can predict 3D heatmaps indicating the location of multimodal concepts such
+              as objects, sounds, and images.
+            </p>
+            <img src="static/images/cross_modal_fusion.png" />
+            <h3 class="title is-4">Cross-Modal Reasoning</h3>
+            <p>
+              When the language is ambiguous, the robot can use the multimodal information
+              to narrow down the goal location. For example, if the robot is asked to go to
+              the "chair near the sound of baby crying", it can use the audio information
+              integrated in the map to disambiguate the goal. The intuition behind this is that
+              we convert the predictions from different modalities into 3D heatmaps, and compute
+              the pixel-wise joint probability of the heatmaps. This allows us to compute the
+              probability of a goal location given the multimodal query.
+            </p>
+            <h3 class="title is-4">Multimodal Spatial Goal Navigation</h3>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="static/images/multi_modal_codegen.mp4" type="video/mp4">
+            </video>
+            <p>
+              We generate the navigation policies in the form of executable code with the help of Large Language Models.
+              By providing a few examples in the prompt, we exploit GPT-3 to parse language
+              instructions into a string of executable code, expressing functions
+              or logic structures (if/else statements, for/while loops) and parameterizing API calls
+              (e.g., robot.load_image(img_path), robot.move_to(position), robot.get_major_map(sound=sound_name),
+              robot.get_major_map(img=image),
+              robot.get_major_map(obj=obj_name) etc.).
+            </p>
+            <!-- <video autoplay muted loop playsinline width="100%">
+              <source src="static/images/vlmaps_blog_post.mp4" type="video/mp4">
+            </video> -->
+
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+
+          <div class="columns is-centered">
+
+
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3">Experiment</h2>
+
+                <h3 class="title is-4">Multimodal Spatial Goal Navigation From Language</h3>
+                <div class="is-vcentered interpolation-panel">
+                  <!-- <p>Sequence 1</p> -->
+                  <div class="has-text-centered">
+                    <video autoplay controls muted loop playsinline width="80%" height="50%">
+                      <source src="static/images/avlmaps_middle_back_pack_glass_breaking_and_image.mp4"
+                        type="video/mp4">
+                    </video>
+                  </div>
+                  <hr>
+                  <!-- <p>Sequence 2</p> -->
+                  <div class="has-text-centered">
+                    <video autoplay controls muted loop playsinline width="80%" height="50%">
+                      <source src="static/images/avlmaps_door_chair_dog_bark.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <hr>
+                  <!-- <p>Sequence 3</p> -->
+                  <div class="has-text-centered">
+                    <video autoplay controls muted loop playsinline width="80%" height="50%">
+                      <source src="static/images/avlmaps_between_two_shelvings.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <!-- <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/spatial_goal_nav_cow_1.mp4" type="video/mp4">
+                    </video>
+                    <p>CLIP on Wheels</p>
+                  </div> -->
+                </div>
+                <hr>
+
+                <h3 class="title is-4">Cross-Modal Goal Reasoning Demo</h3>
+
+                <label for="major_heatmap">Choose a concept for the major:</label>
+                <select name="major_heatmap" id="major_heatmap">
+                  <optgroup label="Object">
+                    <option value="chair">chair</option>
+                    <option value="backpack">backpack</option>
+                    <option value="door">door</option>
+                    <option value="shelf">shelf</option>
+                  </optgroup>
+                  <optgroup label="Sound">
+                    <option value="glass breaking">sound of glass breaking</option>
+                    <option value="dog">sound of dog</option>
+                    <option value="baby crying">sound of baby crying</option>
+                    <option value="church bell">sound of church bell</option>
+                  </optgroup>
+                </select>
+
+                <label for="auxiliary_heatmap">Choose a concept to disambiguate goals:</label>
+                <select name="auxiliary_heatmap" id="auxiliary_heatmap">
+                  <optgroup label="Object">
+                    <option value="chair">chair</option>
+                    <option value="backpack">backpack</option>
+                    <option value="door">door</option>
+                    <option value="shelf">shelf</option>
+                  </optgroup>
+                  <optgroup label="Sound">
+                    <option value="glass breaking">sound of glass breaking</option>
+                    <option value="dog">sound of dog</option>
+                    <option value="baby crying">sound of baby crying</option>
+                    <option value="church bell">sound of church bell</option>
+                  </optgroup>
+                </select>
+
+                <button type="button" onclick="show()" id="btnID">Click Me!</button>
+                <div class="columns has-text-centered">
+                  <div class="column">
+                    <p>Major</p>
+                    <img id="major_heatmap_img" src="" />
+                  </div>
+                  <div class="column">
+                    <p>Auxiliary</p>
+                    <img id="auxiliaray_heatmap_img" src="" />
+                  </div>
+                  <div class="column">
+                    <p>Fuse</p>
+                    <img id="fuse_heatmap_img" src="" />
+                  </div>
+                </div>
+                <script>
+                  function show() {
+
+                    /* Access image by id and change
+                    the display property to block*/
+                    // document.getElementById('major_heatmap')
+                    //   .style.display = "block";
+                    var v1 = document.getElementById('major_heatmap').value;
+                    var v2 = document.getElementById('auxiliary_heatmap').value;
+                    if (v1 === "chair") {
+                      document.getElementById('major_heatmap_img').src = "static/images/major_heatmap/chair_heatmap.png";
+                    }
+                    if (v2 === "dog") {
+                      document.getElementById('auxiliaray_heatmap_img').src = "static/images/auxi_map/dog_heatmap.png";
+                    }
+                    if (v1 === "chair" && v2 === "dog") {
+                      document.getElementById('fuse_heatmap_img').src = "static/images/fuse_map/chair_near_dog_heatmap.png";
+                    }
+
+                    // document.getElementById('btnID')
+                    //   .style.display = "none";
+                  }
+                </script>
+
+                <!-- <div class="columns is-vcentered interpolation-panel">
+                  <p>Sequence 2</p>
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/spatial_goal_nav_2_v1.mp4" type="video/mp4">
+                    </video>
+                    <p>VLMaps</p>
+                  </div>
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/spatial_goal_nav_cow_2.mp4" type="video/mp4">
+                    </video>
+                    <p>CLIP on Wheels</p>
+                  </div>
+                </div>
+
+
+                <br /> -->
+
+                <!-- <h3 class="title is-4">Multi-Embodiment Navigation</h3>
+                <div class="content has-text-justified">
+                  <p>
+                    A VLMap can be shared among different robots and enables generation of obstacle maps for different
+                    embodiments on-the-fly to improve navigation efficiency. For example, a LoCoBot (ground robot) has
+                    to avoid sofa, tables, chairs and so on during planning while a drone can ignore them. Experiments
+                    below show how a single VLMap representation in each scene can adapt to different embodiments
+                    (by generating customized obstacle maps) and improve navigation efficiency.
+                  </p>
+                </div>
+
+                <p>Move to the laptop and the box sequentially</p>
+                <br>
+                <div class="columns is-vcentered interpolation-panel">
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/multi_2_drone.mp4" type="video/mp4">
+                    </video>
+                    <p>Drone</p>
+                  </div>
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/multi_2_locobot.mp4" type="video/mp4">
+                    </video>
+                    <p>LoCoBot</p>
+                  </div>
+                </div>
+
+                <p>Move to the window</p>
+                <br>
+                <div class="columns is-vcentered interpolation-panel">
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/multi_3_drone.mp4" type="video/mp4">
+                    </video>
+                    <p>Drone</p>
+                  </div>
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/multi_3_locobot.mp4" type="video/mp4">
+                    </video>
+                    <p>LoCoBot</p>
+                  </div>
+                </div>
+
+                <p>Move to the television</p>
+                <br>
+                <div class="columns is-vcentered interpolation-panel">
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/multi_4_drone.mp4" type="video/mp4">
+                    </video>
+                    <p>Drone</p>
+                  </div>
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/images/multi_4_locobot.mp4" type="video/mp4">
+                    </video>
+                    <p>LoCoBot</p>
+                  </div>
+                </div> -->
+
+              </div>
+            </div>
+
+          </div>
+      </section>
+
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>
+          </code></pre>
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">People</h2>
+          <div class="columns container">
+            <div class="column has-text-centered profile">
+              <a href="http://www2.informatik.uni-freiburg.de/~huang/"><img src="static/images/huang.jpg"
+                  alt="Chenguang Huang" /></a>
+              <h3><a href="http://www2.informatik.uni-freiburg.de/~huang/">Chenguang Huang</a></h3>
+            </div>
+
+            <div class="column has-text-centered profile">
+              <a href="http://www.oiermees.com"><img src="static/images/mees.jpg" alt="Oier Mees" /></a>
+              <h3><a href="http://www.oiermees.com">Oier Mees</a></h3>
+            </div>
+
+            <div class="column has-text-centered profile">
+              <a href="https://andyzeng.github.io/"><img src="static/images/andy.jpg" alt="Andy Zeng" /></a>
+              <h3><a href="https://andyzeng.github.io/">Andy Zeng</a></h3>
+            </div>
+
+            <div class="column has-text-centered profile">
+              <a href="https://www.utn.de/1/wolfram-burgard/"><img src="static/images/burgard.jpg"
+                  alt="Wolfram Burgard" /></a>
+              <h3><a href="https://www.utn.de/1/wolfram-burgard/">Wolfram Burgard</a></h3>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <a class="icon-link" href="https://arxiv.org/pdf/2210.05714.pdf">
+              <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-link" href="" class="external-link" disabled>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p> Website borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under a <a
+                    href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                    International</a>
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+</html>
