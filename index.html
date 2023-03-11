@@ -331,30 +331,24 @@
                   <optgroup label="Object">
                     <option value="chair">chair</option>
                     <option value="backpack">backpack</option>
-                    <option value="door">door</option>
+                    <!-- <option value="door">door</option> -->
                     <option value="shelf">shelf</option>
-                  </optgroup>
-                  <optgroup label="Sound">
-                    <option value="glass breaking">sound of glass breaking</option>
-                    <option value="dog">sound of dog</option>
-                    <option value="baby crying">sound of baby crying</option>
-                    <option value="church bell">sound of church bell</option>
                   </optgroup>
                 </select>
 
                 <label for="auxiliary_heatmap">Choose a concept to disambiguate goals:</label>
                 <select name="auxiliary_heatmap" id="auxiliary_heatmap">
-                  <optgroup label="Object">
-                    <option value="chair">chair</option>
-                    <option value="backpack">backpack</option>
-                    <option value="door">door</option>
-                    <option value="shelf">shelf</option>
-                  </optgroup>
                   <optgroup label="Sound">
-                    <option value="glass breaking">sound of glass breaking</option>
                     <option value="dog">sound of dog</option>
-                    <option value="baby crying">sound of baby crying</option>
-                    <option value="church bell">sound of church bell</option>
+                    <option value="glass_breaking">sound of glass breaking</option>
+                    <option value="baby_crying">sound of baby crying</option>
+                    <option value="church_bell">sound of church bell</option>
+                  </optgroup>
+                  <optgroup label="Object">
+                    <!-- <option value="chair">chair</option> -->
+                    <option value="backpack">backpack</option>
+                    <!-- <option value="door">door</option> -->
+                    <!-- <option value="shelf">shelf</option> -->
                   </optgroup>
                 </select>
 
@@ -362,15 +356,15 @@
                 <div class="columns has-text-centered">
                   <div class="column">
                     <p>Major</p>
-                    <img id="major_heatmap_img" src="" />
+                    <img id="major_heatmap_img" src="static/images/major_heatmap/chair_heatmap.png" />
                   </div>
                   <div class="column">
                     <p>Auxiliary</p>
-                    <img id="auxiliaray_heatmap_img" src="" />
+                    <img id="auxiliaray_heatmap_img" src="static/images/auxi_map/dog_heatmap.png" />
                   </div>
                   <div class="column">
                     <p>Fuse</p>
-                    <img id="fuse_heatmap_img" src="" />
+                    <img id="fuse_heatmap_img" src="static/images/fuse_map/chair_near_dog_heatmap.png" />
                   </div>
                 </div>
                 <script>
@@ -382,15 +376,9 @@
                     //   .style.display = "block";
                     var v1 = document.getElementById('major_heatmap').value;
                     var v2 = document.getElementById('auxiliary_heatmap').value;
-                    if (v1 === "chair") {
-                      document.getElementById('major_heatmap_img').src = "static/images/major_heatmap/chair_heatmap.png";
-                    }
-                    if (v2 === "dog") {
-                      document.getElementById('auxiliaray_heatmap_img').src = "static/images/auxi_map/dog_heatmap.png";
-                    }
-                    if (v1 === "chair" && v2 === "dog") {
-                      document.getElementById('fuse_heatmap_img').src = "static/images/fuse_map/chair_near_dog_heatmap.png";
-                    }
+                      document.getElementById('major_heatmap_img').src = `static/images/major_heatmap/${v1}_heatmap.png`;
+                      document.getElementById('auxiliaray_heatmap_img').src = `static/images/auxi_map/${v2}_heatmap.png`;
+                      document.getElementById('fuse_heatmap_img').src = `static/images/fuse_map/${v1}_near_${v2}_heatmap.png`;
 
                     // document.getElementById('btnID')
                     //   .style.display = "none";
