@@ -139,7 +139,8 @@
         <img src="static/images/cover_lady.png" />
 
         <h2 class="subtitle has-text-centered">
-          AVLMaps consumes multimodal prompts from audio, vision and language to solve zero shot spatial navigation tasks in the real world.
+          AVLMaps consumes multimodal prompts from audio, vision and language to solve zero shot spatial navigation
+          tasks in the real world.
         </h2>
       </div>
     </div>
@@ -195,11 +196,21 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              While interacting in the world is a multi-sensory experience, many robots still rely only on visual perception to map and navigate in their environments. In this work, we propose Audio-Visual-Language Maps (AVLMaps), a unified 3D spatial map representation for storing cross-modal information from audio, visual, and language
-              cues. AVLMaps integrate the open-vocabulary capabilities of multimodal foundation models pre-trained on Internet-scale data by fusing their features into a centralized 3D voxel grid. In the context of navigation, we show that AVLMaps enable robot systems to index goals in the map based on multimodal queries, e.g., textual descriptions,
-              images, or audio snippets of landmarks. In particular, the addition of audio information enables robots to more reliably disambiguate goal
-              locations. Extensive experiments in simulation show that AVLMaps enable zero-shot multimodal goal navigation from natural language
-              instructions and provide 50% better recall in ambiguous scenarios. These capabilities extend to mobile robots in the real world – navigating to landmarks where specific sounds were heard in unstructured environments.
+              While interacting in the world is a multi-sensory experience, many robots still rely only on visual
+              perception to map and navigate in their environments. In this work, we propose Audio-Visual-Language Maps
+              (AVLMaps), a unified 3D spatial map representation for storing cross-modal information from audio, visual,
+              and language
+              cues. AVLMaps integrate the open-vocabulary capabilities of multimodal foundation models pre-trained on
+              Internet-scale data by fusing their features into a centralized 3D voxel grid. In the context of
+              navigation, we show that AVLMaps enable robot systems to index goals in the map based on multimodal
+              queries, e.g., textual descriptions,
+              images, or audio snippets of landmarks. In particular, the addition of audio information enables robots to
+              more reliably disambiguate goal
+              locations. Extensive experiments in simulation show that AVLMaps enable zero-shot multimodal goal
+              navigation from natural language
+              instructions and provide 50% better recall in ambiguous scenarios. These capabilities extend to mobile
+              robots in the real world – navigating to landmarks where specific sounds were heard in unstructured
+              environments.
             </p>
           </div>
         </div>
@@ -283,7 +294,7 @@
                 <div class="is-vcentered interpolation-panel">
                   <!-- <p>Sequence 1</p> -->
                   <div class="has-text-centered">
-                    <video autoplay controls muted loop playsinline width="80%" height="50%">
+                    <video class="video_2x" autoplay controls muted loop playsinline width="80%" height="50%">
                       <source src="static/images/avlmaps_middle_back_pack_glass_breaking_and_image.mp4"
                         type="video/mp4">
                     </video>
@@ -291,34 +302,43 @@
                   <hr>
                   <!-- <p>Sequence 2</p> -->
                   <div class="has-text-centered">
-                    <video autoplay controls muted loop playsinline width="80%" height="50%">
+                    <video class="video_2x" autoplay controls muted loop playsinline width="80%" height="50%">
                       <source src="static/images/avlmaps_door_chair_dog_bark.mp4" type="video/mp4">
                     </video>
                   </div>
                   <hr>
                   <!-- <p>Sequence 3</p> -->
                   <div class="has-text-centered">
-                    <video autoplay controls muted loop playsinline width="80%" height="50%">
+                    <video class="video_2x" autoplay controls muted loop playsinline width="80%" height="50%">
                       <source src="static/images/avlmaps_between_two_shelvings.mp4" type="video/mp4">
                     </video>
                   </div>
-                  <!-- <div class="column  has-text-centered">
-                    <video autoplay controls muted loop playsinline height="100%">
-                      <source src="static/images/spatial_goal_nav_cow_1.mp4" type="video/mp4">
-                    </video>
-                    <p>CLIP on Wheels</p>
-                  </div> -->
+                  <script>
+                    var vid = document.getElementsByClassName("video_2x");
+                    for (var i = 0; i < vid.length; i++){
+                      vid[i].playbackRate = 2.0;
+                    }
+                  </script>
                 </div>
                 <hr>
 
                 <h3 class="title is-4">Cross-Modal Goal Reasoning Demo</h3>
 
-                <label for="major_heatmap">Choose a concept for the major:</label>
+                <label for="combined_heatmap">Choose a concept:</label>
+                <select name="combined_heatmap" id="combined_heatmap" class="large_select">
+                    <option value="chair_dog">the chair near the sound of dog</option>
+                    <option value="backpack_glassbreaking">the backpack near the sound of glass breaking</option>
+                    <option value="shelf_backpack">the shelf near the backpack</option>
+                    <option value="shelf_dog">the shelf near the sound of dog</option>
+                    <option value="paperbox_churchbell">the paperbox near the sound of church bell</option>
+                    <option value="shelf_doorknock">the shelf near the sound of door knock</option>
+                </select>
+
+                <!-- <label for="major_heatmap">Choose a concept for the major:</label>
                 <select name="major_heatmap" id="major_heatmap">
                   <optgroup label="Object">
                     <option value="chair">chair</option>
                     <option value="backpack">backpack</option>
-                    <!-- <option value="door">door</option> -->
                     <option value="shelf">shelf</option>
                   </optgroup>
                 </select>
@@ -327,19 +347,16 @@
                 <select name="auxiliary_heatmap" id="auxiliary_heatmap">
                   <optgroup label="Sound">
                     <option value="dog">sound of dog</option>
-                    <option value="glass_breaking">sound of glass breaking</option>
+                    <option value="glassbreaking">sound of glass breaking</option>
                     <option value="baby_crying">sound of baby crying</option>
                     <option value="church_bell">sound of church bell</option>
                   </optgroup>
                   <optgroup label="Object">
-                    <!-- <option value="chair">chair</option> -->
                     <option value="backpack">backpack</option>
-                    <!-- <option value="door">door</option> -->
-                    <!-- <option value="shelf">shelf</option> -->
                   </optgroup>
-                </select>
+                </select> -->
 
-                <button type="button" onclick="show()" id="btnID">Click Me!</button>
+                <button type="button" onclick="show_img()" id="btnID" class="large_button">Update</button>
                 <div class="columns has-text-centered">
                   <div class="column">
                     <p>Major</p>
@@ -355,20 +372,22 @@
                   </div>
                 </div>
                 <script>
-                  function show() {
+                  function show_img() {
 
                     /* Access image by id and change
                     the display property to block*/
                     // document.getElementById('major_heatmap')
-                    //   .style.display = "block";
-                    var v1 = document.getElementById('major_heatmap').value;
-                    var v2 = document.getElementById('auxiliary_heatmap').value;
-                      document.getElementById('major_heatmap_img').src = `static/images/major_heatmap/${v1}_heatmap.png`;
-                      document.getElementById('auxiliaray_heatmap_img').src = `static/images/auxi_map/${v2}_heatmap.png`;
-                      document.getElementById('fuse_heatmap_img').src = `static/images/fuse_map/${v1}_near_${v2}_heatmap.png`;
+                    // var v1 = document.getElementById('major_heatmap').value;
+                    // var v2 = document.getElementById('auxiliary_heatmap').value;
+                    var v = document.getElementById('combined_heatmap').value;
+                    const myArray = v.split("_");
+                    // document.getElementById('major_heatmap_img').src = `static/images/major_heatmap/${v1}_heatmap.png`;
+                    // document.getElementById('auxiliaray_heatmap_img').src = `static/images/auxi_map/${v2}_heatmap.png`;
+                    // document.getElementById('auxiliaray_heatmap_img').src = `static/images/auxi_map/${v1}_near_${v2}_heatmap.png`;
+                    document.getElementById('major_heatmap_img').src = `static/images/major_heatmap/${myArray[0]}_heatmap.png`;
+                    document.getElementById('auxiliaray_heatmap_img').src = `static/images/auxi_map/${myArray[1]}_heatmap.png`;
+                    document.getElementById('fuse_heatmap_img').src = `static/images/fuse_map/${myArray[0]}_near_${myArray[1]}_heatmap.png`;
 
-                    // document.getElementById('btnID')
-                    //   .style.display = "none";
                   }
                 </script>
 

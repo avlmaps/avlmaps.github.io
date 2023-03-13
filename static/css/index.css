@@ -163,3 +163,13 @@ body {
   border-radius: 5px;
 }
 
+.large_button{
+  width: 100px;
+  height: 30px;
+}
+
+.large_select{
+  width: 500px;
+  height: 30px;
+
+}
