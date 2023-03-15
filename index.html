@@ -238,9 +238,6 @@
           <h2 class="title is-3">Approach</h2>
           <div class="content has-text-justified has-text-centered">
             <img src="static/images/pipeline.png" />
-            <video autoplay muted loop playsinline width="100%">
-              <source src="static/images/avlmaps_twitter_post.mp4" type="video/mp4">
-            </video>
             <h3 class="title is-4">AVLMap Creation</h3>
             <p>
               The key idea behind building an AVLMap is to integrate visual and audio
@@ -251,7 +248,12 @@
               can predict 3D heatmaps indicating the location of multimodal concepts such
               as objects, sounds, and images.
             </p>
-            <img src="static/images/cross_modal_fusion.png" />
+            <div class="video-container">
+              <video autoplay muted loop playsinline width="50%">
+                <source src="static/images/avlmaps_twitter_post_slide_1_cropped.mp4" type="video/mp4">
+              </video>
+
+            </div>
             <h3 class="title is-4">Cross-Modal Reasoning</h3>
             <p>
               When the language is ambiguous, the robot can use the multimodal information
@@ -262,10 +264,11 @@
               the pixel-wise joint probability of the heatmaps. This allows us to compute the
               probability of a goal location given the multimodal query.
             </p>
+            <img style="display: flex; justify-content: center;" src="static/images/cross_modal_fusion.png" width="100%"/>
             <h3 class="title is-4">Multimodal Spatial Goal Navigation</h3>
-            <video autoplay muted loop playsinline width="100%">
+            <!-- <video autoplay muted loop playsinline width="100%">
               <source src="static/images/multi_modal_codegen.mp4" type="video/mp4">
-            </video>
+            </video> -->
             <p>
               We generate the navigation policies in the form of executable code with the help of Large Language Models.
               By providing a few examples in the prompt, we exploit GPT-3 to parse language
@@ -275,6 +278,11 @@
               robot.get_major_map(img=image),
               robot.get_major_map(obj=obj_name) etc.).
             </p>
+            <div class="video-container">
+              <video autoplay muted loop playsinline width="50%">
+                <source src="static/images/avlmaps_twitter_post_slide_2_square_normal_speed.mp4" type="video/mp4">
+              </video>
+            </div>  
             <!-- <video autoplay muted loop playsinline width="100%">
               <source src="static/images/vlmaps_blog_post.mp4" type="video/mp4">
             </video> -->
@@ -297,7 +305,7 @@
                 <div class="is-vcentered interpolation-panel">
                   <!-- <p>Sequence 1</p> -->
                   <div class="has-text-centered">
-                    <video class="video_2x" autoplay controls muted loop playsinline width="80%" height="50%">
+                    <video class="video_4x" autoplay controls muted loop playsinline width="80%" height="50%">
                       <source src="static/images/avlmaps_middle_back_pack_glass_breaking_and_image.mp4"
                         type="video/mp4">
                     </video>
@@ -305,19 +313,19 @@
                   <hr>
                   <!-- <p>Sequence 2</p> -->
                   <div class="has-text-centered">
-                    <video class="video_2x" autoplay controls muted loop playsinline width="80%" height="50%">
+                    <video class="video_4x" autoplay controls muted loop playsinline width="80%" height="50%">
                       <source src="static/images/avlmaps_door_chair_dog_bark.mp4" type="video/mp4">
                     </video>
                   </div>
                   <hr>
                   <!-- <p>Sequence 3</p> -->
                   <div class="has-text-centered">
-                    <video class="video_2x" autoplay controls muted loop playsinline width="80%" height="50%">
+                    <video class="video_4x" autoplay controls muted loop playsinline width="80%" height="50%">
                       <source src="static/images/avlmaps_between_two_shelvings.mp4" type="video/mp4">
                     </video>
                   </div>
                   <script>
-                    var vid = document.getElementsByClassName("video_2x");
+                    var vid = document.getElementsByClassName("video_4x");
                     for (var i = 0; i < vid.length; i++) {
                       vid[i].playbackRate = 4.0;
                     }
